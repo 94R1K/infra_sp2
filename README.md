@@ -1,5 +1,6 @@
-# Описание.
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Проект+API+YaMDB+by+Y4R1K)](https://git.io/typing-svg)
 
+# Описание
 Проект предназначен для взаимодействия с API социальной сети YaMDb. YaMDb собирает отзывы пользователей на различные произведения.
 
 API предоставляет возможность взаимодействовать с базой данных по следующим направлениям:
@@ -11,9 +12,9 @@ API предоставляет возможность взаимодейство
 
 # Переменные окружения.
 Проект использует базу данных PostgreSQL.
-Для подключения и выполненя запросов к базе данных необходимо создать и заполнить файл ".env" с переменными окружения в папке /infra/.
+Для подключения и выполненя запросов к базе данных необходимо создать и заполнить файл .env с переменными окружения в папке /infra/.
 
-Шаблон для заполнения файла ".env":
+Шаблон для заполнения файла .env:
 
 ```
 DB_ENGINE=django.db.backends.postgresql
@@ -25,7 +26,6 @@ DB_PORT=5432
 SECRET_KEY='Здесь указать секретный ключ'
 ```
 ### Как запустить проект:
-
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
@@ -51,7 +51,7 @@ python -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
-Из папки "./infra/" выполнить команду создания и запуска контейнеров:
+Из папки /infra/ выполнить команду создания и запуска контейнеров:
 
 ```
 docker-compose up
@@ -74,10 +74,10 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
+
 Теперь проект доступен по адресу http://localhost/admin/
 
 # Заполнение базы данных:
-
 Скопировать файл с дампом базы данных из папки /infra/ в контейнер:
 
 ```
@@ -88,6 +88,7 @@ docker cp fixtures.json infra-web-1:/app/fixtures.json
 ```
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
+
 # Техническая информация
 Стек технологий: Python 3, Django, Django Rest, Docker, PostgreSQL, nginx, gunicorn, simple JWT.
 
@@ -99,4 +100,4 @@ API фреймворк: Django REST (контейнер web)
 Веб-сервер nginx перенаправляет запросы клиентов к контейнеру web, либо к хранилищам (volume) статики и файлов.
 Контейнер nginx взаимодействует с контейнером web через gunicorn.
 
-### Дополнительное описание доступно по http://localhost/redoc/
+### Дополнительное описание API доступно по http://localhost/redoc/
