@@ -45,6 +45,10 @@ source venv/Scripts/activate
 Установить зависимости из файла requirements.txt:
 
 ```
+cd api_yamdb
+```
+
+```
 python -m pip install --upgrade pip
 ```
 
