@@ -104,3 +104,11 @@ API фреймворк: Django REST (контейнер web)
 Контейнер nginx взаимодействует с контейнером web через gunicorn.
 
 ### Дополнительное описание API доступно по http://localhost/redoc/
+
+# Об авторе
+Лошкарев Ярослав Эдуардович \
+Python-разработчик (Backend) \
+Россия, г. Москва \
+E-mail: real-man228@yandex.ru \
+VK: https://vk.com/94r1k \
+Telegram: @y4r1k0
