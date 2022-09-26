@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:13.0-alpine
     volumes:
-      - /var/lib/docker/volumes/db_data/_data
+      - db_value:/var/lib/docker/volumes/db_data/
     env_file:
       - .env
   web:
@@ -33,5 +33,6 @@ services:
       - web
 
 volumes:
+  db_value:
   static_value:
   media_value:
